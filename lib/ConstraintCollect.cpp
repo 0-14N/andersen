@@ -19,7 +19,7 @@ void Andersen::collectConstraints(const Module& M)
 	constraints.emplace_back(AndersConstraint::ADDR_OF,
 		nodeFactory.getUniversalPtrNode(), nodeFactory.getUniversalObjNode());
 	constraints.emplace_back(AndersConstraint::STORE,
-		nodeFactory.getUniversalObjNode(), nodeFactory.getUniversalObjNode());
+		nodeFactory.getUniversalPtrNode(), nodeFactory.getUniversalObjNode());
 
 	// Next, the null pointer points to the null object.
 	constraints.emplace_back(AndersConstraint::ADDR_OF,
